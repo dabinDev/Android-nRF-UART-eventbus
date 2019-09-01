@@ -280,7 +280,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                     ((TextView) findViewById(R.id.deviceName)).setText(btDevice.getName() + " - connecting");
                     // store connected device
                     Log.d(TAG, "..storing lastDeviceAddress= " + deviceAddress);
-                    DevicePreferences.setLastDevice(getApplicationContext(), deviceAddress);
+                    lastDeviceAddress=lastDeviceAddress;
+                DevicePreferences.setLastDevice(getApplicationContext(), deviceAddress);
                     uartService.connect(lastDeviceAddress);
 
 
